@@ -31,8 +31,8 @@ echo "alias proxychains='proxychains4'" >> .bashrc
 profile_dir=$(find /root/.mozilla/firefox -name '*.default')
 cd $profile_dir
 cat << EOF >> user.js
-user_pref("media.peerconnection.enabled","false");
-user_pref("geo.enabled","false");
+user_pref("media.peerconnection.enabled", false);
+user_pref("geo.enabled", false);
 EOF
 
 #start audio at boot
