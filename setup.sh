@@ -63,6 +63,9 @@ EOF
 cd '/root/Downloads'
 git clone https://github.com/offensive-security/exploit-database-bin-sploits.git
 
+#enable packet forwarding
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
 #restart services to enable changes
 pulseaudio
 
