@@ -63,6 +63,9 @@ EOF
 cd '/root/Downloads'
 git clone https://github.com/offensive-security/exploit-database-bin-sploits.git
 
+#download fluxion - for evil twin WPA capture
+git clone https://github.com/deltaxflux/fluxion
+
 #enable packet forwarding
 echo 1 > /proc/sys/net/ipv4/ip_forward
 
