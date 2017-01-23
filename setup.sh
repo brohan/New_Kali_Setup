@@ -2,7 +2,7 @@
 
 #uninstall and install packages update searchsploit
 apt-get -y remove proxychains
-apt-get -y install tor hexchat hostapd-wpe
+apt-get -y install tor hexchat hostapd-wpe bridge-utils
 
 searchsploit -u
 
