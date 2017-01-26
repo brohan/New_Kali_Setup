@@ -72,6 +72,15 @@ cd '/root'
 #enable packet forwarding
 echo 1 > /proc/sys/net/ipv4/ip_forward
 
+#disable NetworkManager for wlan1mon
+
+cd '/etc/NetworkManager'
+cat << EOF >> NetworkManager.conf
+[keyfile]
+unmanaged-devices=interface-name:wlan0mon;interface-name:wlan1mon;interface-name:wlan2mon;interface-name:wlan3mon;interface-name:wlan4mon;interface-name:wlan5mon;interface-name:wlan6mon;interface-name:wlan7mon;interface-name:wlan8mon;interface-name:wlan9mon;interface-name:wlan10mon;interface-name:wlan11mon;interface-name:wlan12mon
+EOF
+
+
 #restart services to enable changes
 pulseaudio
 
