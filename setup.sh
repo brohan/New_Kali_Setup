@@ -58,7 +58,7 @@ cat <<EOF >> resolv.conf
 nameserver 37.58.80.195
 nameserver 185.83.217.248
 EOF
-
+chatter +i resolv.conf
 #download explot-db binaries
 cd '/root/Downloads'
 git clone https://github.com/offensive-security/exploit-database-bin-sploits.git
