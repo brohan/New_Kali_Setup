@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# set bash mode to vi
+echo "set editing-mode vi" >> /etc/inputrc
+
 #uninstall and install packages update searchsploit
 apt-get -y remove proxychains
 apt-get -y install tor hexchat hostapd-wpe bridge-utils
