@@ -5,7 +5,7 @@ echo "set editing-mode vi" >> /etc/inputrc
 
 #uninstall and install packages update searchsploit
 apt-get -y remove proxychains
-apt-get -y install tor hexchat hostapd-wpe bridge-utils
+apt-get -y install openvas tor hexchat hostapd-wpe bridge-utils
 
 searchsploit -u
 
@@ -86,4 +86,5 @@ EOF
 
 #restart services to enable changes
 pulseaudio
+
 
