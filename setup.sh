@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#change hostname from obvious Kali
+echo "user1" > /etc/hostname
+sed -i -e 's/kali/user1/' /etc/hosts
+
+
 # set bash mode to vi
 echo "set editing-mode vi" >> /etc/inputrc
 
