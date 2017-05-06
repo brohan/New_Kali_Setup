@@ -10,7 +10,7 @@ echo "set editing-mode vi" >> /etc/inputrc
 
 #uninstall and install packages update searchsploit
 apt-get -y remove proxychains
-apt-get -y install openvas tor hexchat hostapd-wpe bridge-utils
+apt-get -y install openvas tor hexchat hostapd-wpe bridge-utils libnl-3-dev libgcrypt11-dev libnl-genl-3-dev devscripts synaptic
 
 searchsploit -u
 
