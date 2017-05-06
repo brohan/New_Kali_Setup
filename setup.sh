@@ -68,6 +68,10 @@ nameserver 185.83.217.248
 EOF
 chatter +i resolv.conf
 
+#download and install atom text editor
+cd '/root/Downloads'
+wget https://atom.io/download/deb -O atom.deb
+dpkg -i atom.deb
 
 #download and install fluxion - for evil twin WPA capture
 git clone https://github.com/deltaxflux/fluxion
