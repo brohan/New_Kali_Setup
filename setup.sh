@@ -75,7 +75,7 @@ dpkg -i atom.deb
 
 #download jython for Burpsuite extension
 cd '/root/Downloads'
-wget http://search.maven.org/remotecontent?filepath=org/python/jython-installer/2.7.0/jython-installer-2.7.0.jar
+wget http://search.maven.org/remotecontent?filepath=org/python/jython-installer/2.7.0/jython-installer-2.7.0.jar -O jython-installer-2.7.0.jar
 
 #download and install fluxion - for evil twin WPA capture
 git clone https://github.com/deltaxflux/fluxion
