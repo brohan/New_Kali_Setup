@@ -8,6 +8,9 @@ sed -i -e 's/kali/user1/' /etc/hosts
 # set bash mode to vi
 echo "set editing-mode vi" >> /etc/inputrc
 
+#update and upgrade system
+
+
 #uninstall and install packages update searchsploit
 apt-get -y remove proxychains
 apt-get -y install openvas tor hexchat hostapd-wpe bridge-utils libnl-3-dev libgcrypt11-dev libnl-genl-3-dev devscripts synaptic
@@ -33,7 +36,7 @@ rm proxychains.conf
 curl -o proxychains.conf https://raw.githubusercontent.com/brohan/proxychains4conf/master/proxychains.conf
 
 cd '/root'
-echo "alias proxychains='proxychains4'" >> .bashrc
+echo "alias proxychains='proxychains4'" >> .bash_aliases
 
 #edit firefox about:config by creating a user.js file in profile directory
 profile_dir=$(find /root/.mozilla/firefox -name '*.default')
@@ -44,20 +47,20 @@ user_pref("geo.enabled", false);
 EOF
 
 #start audio at boot
-cd '/root'
-cat <<EOF >> .bashrc
+#cd '/root'
+#cat <<EOF >> .bashrc
 
 #Pulseaudio with terminal startup
-until [[ `ps aux | grep "pulseaudio -D" | grep -v grep | wc -l` -eq 1 ]]
-do
-    pulseaudio -D >/dev/null 2>&1
-    if [[ `ps aux | grep "pulseaudio -D" | grep -v grep | wc -l` -gt 1 ]]
-    then
-        kill -9 `pidof pulseaudio`
-        pulseaudio -D
-    fi
-done
-EOF
+#until [[ `ps aux | grep "pulseaudio -D" | grep -v grep | wc -l` -eq 1 ]]
+#do
+#    pulseaudio -D >/dev/null 2>&1
+#    if [[ `ps aux | grep "pulseaudio -D" | grep -v grep | wc -l` -gt 1 ]]
+#    then
+#        kill -9 `pidof pulseaudio`
+#        pulseaudio -D
+#    fi
+#done
+#EOF
 
 #add nameservers
 cd '/etc'
