@@ -86,9 +86,6 @@ cd '/root/Downloads/fluxion'
 ./Installer.sh
 cd '/root'
 
-#clone Lee Baird discover Script
-cd
-git clone https://github.com/leebaird/discover.git
 #enable packet forwarding
 echo 1 > /proc/sys/net/ipv4/ip_forward
 
@@ -103,3 +100,12 @@ EOF
 
 #restart services to enable changes
 pulseaudio
+
+#clone run, and install Lee Baird discover script
+cd
+git clone https://github.com/leebaird/discover.git
+cd /root/discover
+./update.#!/bin/sh
+
+echo "Install neo4j at"
+firefox -new-tab https://https://neo4j.com/download/community-edition
