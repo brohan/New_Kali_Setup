@@ -36,7 +36,7 @@ rm proxychains.conf
 curl -o proxychains.conf https://raw.githubusercontent.com/brohan/proxychains4conf/master/proxychains.conf
 
 cd '/root'
-echo "alias proxychains='proxychains4'" >> .bash_aliasesexec
+echo "alias proxychains='proxychains4'" >> .bash_aliases
 
 #edit firefox about:config by creating a user.js file in profile directory
 profile_dir=$(find /root/.mozilla/firefox -name '*.default')
