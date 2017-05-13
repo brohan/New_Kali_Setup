@@ -9,7 +9,7 @@ sed -i -e 's/kali/user1/' /etc/hosts
 echo "set editing-mode vi" >> /etc/inputrc
 
 #update and upgrade system
-
+apt install virtualbox
 
 #uninstall and install packages update searchsploit
 apt-get -y remove proxychains
@@ -105,7 +105,7 @@ pulseaudio
 cd
 git clone https://github.com/leebaird/discover.git
 cd /root/discover
-./update 
+./update
 
 echo "Install neo4j at"
 firefox -new-tab https://neo4j.com/download/community-edition
