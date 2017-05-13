@@ -103,9 +103,14 @@ pulseaudio
 
 #clone run, and install Lee Baird discover script
 cd
-git clone https://github.com/leebaird/discover.git
-cd /root/discover
+git clone https://github.com/leebaird/discover /opt/discover/
+cd /opt/discover
 ./update
+chmod 777 /usr/share/theharvester/theHarvester.py
+cd
+mkdir bin
+echo "export PATH=$PATH:/root/bin"  >> .bashrc
+ln -s /opt/discover/discover.sh /root/bin/discover
 
 echo "Install neo4j at"
 firefox -new-tab https://neo4j.com/download/community-edition
