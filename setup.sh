@@ -108,4 +108,4 @@ cd /root/discover
 ./update 
 
 echo "Install neo4j at"
-firefox -new-tab https://https://neo4j.com/download/community-edition
+firefox -new-tab https://neo4j.com/download/community-edition
