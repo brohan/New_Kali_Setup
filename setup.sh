@@ -105,7 +105,7 @@ pulseaudio
 cd
 git clone https://github.com/leebaird/discover.git
 cd /root/discover
-./update.#!/bin/sh
+./update 
 
 echo "Install neo4j at"
 firefox -new-tab https://https://neo4j.com/download/community-edition
