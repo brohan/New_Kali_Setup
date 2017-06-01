@@ -13,7 +13,7 @@ apt install virtualbox
 
 #uninstall and install packages update searchsploit
 apt-get -y remove proxychains
-apt-get -y install openvas tor hexchat hostapd-wpe kde-spectacle synaptic libpq-dev bridge-utils libnl-3-dev libgcrypt11-dev libnl-genl-3-dev devscripts cupp
+apt-get -y install openvas tor hexchat hostapd-wpe kde-spectacle synaptic libpq-dev bridge-utils libnl-3-dev libgcrypt11-dev libnl-genl-3-dev devscripts cupp mingw-w64
 
 searchsploit -u
 
