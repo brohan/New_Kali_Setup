@@ -130,6 +130,12 @@ git clone https://github.com/cheetz/icmpshock
 git clone https://github.com/cheetz/brutescrape
 git clone https://github.com/cheetz/reddit_xss
 
+#git Wordhound
+cd '/root/Downloads'
+git clone https://bitbucket.org/mattinfosec/wordhound.git
+cd '/root/Downloads/wordhound'
+./install.sh
+
 
 #download jython for Burpsuite extension
 cd '/root/Downloads'
