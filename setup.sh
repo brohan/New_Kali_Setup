@@ -8,12 +8,14 @@ sed -i -e 's/kali/user1/' /etc/hosts
 # set bash mode to vi
 echo "set editing-mode vi" >> /etc/inputrc
 
-#update and upgrade system
-apt install virtualbox
+apt-get update && upgrade
+#apt install virtualbox
 
 #uninstall and install packages update searchsploit
 apt-get -y remove proxychains
-apt-get -y install openvas tor hexchat hostapd-wpe kde-spectacle synaptic libpq-dev bridge-utils libnl-3-dev libgcrypt11-dev libnl-genl-3-dev devscripts cupp mingw-w64
+apt-get -y install openvas tor hexchat hostapd-wpe kde-spectacle synaptic libpq-dev \
+bridge-utils libnl-3-dev libgcrypt11-dev libnl-genl-3-dev devscripts cupp \
+mingw-w64 eyewitness libxslt-dev libxml2-dev
 
 searchsploit -u
 
@@ -76,6 +78,59 @@ cd '/root/Downloads'
 wget https://atom.io/download/deb -O atom.deb
 dpkg -i atom.deb
 
+#git CMSmap
+cd '/root/Downloads'
+git clone https://github.com/Dionach/CMSmap.git
+
+#git NoSQLMap
+cd '/root/Downloads'
+git clone https://github.com/tcstool/NoSQLMap.git
+cd '/root/Downloads/NoSQLMap'
+python setup.py install
+
+#git SMBexec
+cd '/root/Downloads'
+https://github.com/pentestgeek/smbexec.git
+cd 'root/Downloads/smbexec'
+bundle install
+./install.sh
+
+#git Veil
+cd '/root/Downloads'
+git clone https://github.com/Veil-Framework/Veil-Evasion.git
+
+#git printer exploits
+cd '/root/Download"
+git clone https://github.com/MooseDojo/praedasploit /opt/praedasploit
+
+#get DSHashes
+cd '/root/Downloads'
+wget https://raw.githubusercontent.com/lanmaster53/ptscripts/master/dshashes.py
+
+#git Net-Creds
+cd '/root/Downloads'
+git clone https://github.com/DanMcInerney/net-creds.git
+
+#git Fuzzing Lists
+cd '/root/Downloads'
+git clone https://github.com/danielmiessler/SecLists.git
+
+#git The Backdoor Factory
+cd '/root/Downloads'
+git clone https://github.com/secretsquirrel/the-backdoor-factory
+cd '/root/Downloads/the-backdoor-factory
+./install.sh
+
+#git custom Playbook scripts
+cd '/root/Downloads'
+git clone https://github.com/cheetz/Easy-P.git
+git clone https://github.com/cheetz/Password_Plus_One
+git clone https://github.com/cheetz/PowerShell_Popup
+git clone https://github.com/cheetz/icmpshock
+git clone https://github.com/cheetz/brutescrape
+git clone https://github.com/cheetz/reddit_xss
+
+
 #download jython for Burpsuite extension
 cd '/root/Downloads'
 wget http://search.maven.org/remotecontent?filepath=org/python/jython-installer/2.7.0/jython-installer-2.7.0.jar -O jython-installer-2.7.0.jar
@@ -96,6 +151,7 @@ cat << EOF >> NetworkManager.conf
 [keyfile]
 unmanaged-devices=interface-name:wlan0mon;interface-name:wlan1mon;interface-name:wlan2mon;interface-name:wlan3mon;interface-name:wlan4mon;interface-name:wlan5mon;interface-name:wlan6mon;interface-name:wlan7mon;interface-name:wlan8mon;interface-name:wlan9mon;interface-name:wlan10mon;interface-name:wlan11mon;interface-name:wlan12mon
 EOF
+
 
 # add proper locale so that sparta works
 echo 'export LC_ALL=en_US.UTF-8'>>.bashrc
