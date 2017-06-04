@@ -136,6 +136,13 @@ git clone https://bitbucket.org/mattinfosec/wordhound.git
 cd '/root/Downloads/wordhound'
 ./install.sh
 
+#git httpscreenshot
+cd '/root/Downloads'
+pip install selenium
+git clone https://github.com/breenmachine/httpscreenshot.git
+cd '/root/Downloads/httpscreenshot'
+chmod +x install-dependencies.sh && ./install-dependencies.sh
+
 
 #download jython for Burpsuite extension
 cd '/root/Downloads'
