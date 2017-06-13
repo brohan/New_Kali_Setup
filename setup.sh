@@ -73,6 +73,10 @@ nameserver 185.83.217.248
 EOF
 chatter +i resolv.conf
 
+#git updated reconscan by RoliSoft
+cd '/root/Downloads'
+git clone https://github.com/RoliSoft/ReconScan.git
+
 #download and install atom text editor
 cd '/root/Downloads'
 wget https://atom.io/download/deb -O atom.deb
