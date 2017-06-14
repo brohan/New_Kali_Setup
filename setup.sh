@@ -15,7 +15,7 @@ apt-get update && upgrade
 apt-get -y remove proxychains
 apt-get -y install openvas tor hexchat hostapd-wpe kde-spectacle synaptic libpq-dev \
 bridge-utils libnl-3-dev libgcrypt11-dev libnl-genl-3-dev devscripts cupp \
-mingw-w64 eyewitness libxslt-dev libxml2-dev vega cherrytree
+mingw-w64 eyewitness libxslt-dev libxml2-dev vega cherrytree python3-pip
 
 searchsploit -u
 
@@ -76,6 +76,10 @@ chatter +i resolv.conf
 #git updated reconscan by RoliSoft
 cd '/root/Downloads'
 git clone https://github.com/RoliSoft/ReconScan.git
+pip3 install python-libnmap
+pip3 install colorama
+chmod +x recon.py
+chmod +x vulnscan.py
 
 #download and install atom text editor
 cd '/root/Downloads'
