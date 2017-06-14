@@ -76,10 +76,13 @@ chatter +i resolv.conf
 #git updated reconscan by RoliSoft
 cd '/root/Downloads'
 git clone https://github.com/RoliSoft/ReconScan.git
-pip3 install python-libnmap
-pip3 install colorama
 chmod +x recon.py
 chmod +x vulnscan.py
+cd '/root/Downloads/ReconScan'
+./vulnscan -u
+pip3 install python-libnmap
+pip3 install colorama
+pip3 install lxml
 
 #download and install atom text editor
 cd '/root/Downloads'
@@ -176,7 +179,7 @@ EOF
 
 # add proper locale so that sparta works
 echo 'export LC_ALL=en_US.UTF-8'>>.bashrc
-source .bashrc 
+source .bashrc
 
 #restart services to enable changes
 pulseaudio
