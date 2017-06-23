@@ -22,7 +22,7 @@ searchsploit -u
 #start Firefox 1st time to create profile to edit later
 firefox
 sleep 4
-killall firefox
+ps killall firefox-esr
 
 #download and install new proxychains
 cd '/root/Downloads'
@@ -39,6 +39,8 @@ curl -o proxychains.conf https://raw.githubusercontent.com/brohan/proxychains4co
 
 cd '/root'
 echo "alias proxychains='proxychains4'" >> .bash_aliases
+
+source ~/.bashrc
 
 #edit firefox about:config by creating a user.js file in profile directory
 profile_dir=$(find /root/.mozilla/firefox -name '*.default')
@@ -76,10 +78,10 @@ chatter +i resolv.conf
 #git updated reconscan by RoliSoft
 cd '/root/Downloads'
 git clone https://github.com/RoliSoft/ReconScan.git
+cd '/root/Downloads/ReconScan'
 chmod +x recon.py
 chmod +x vulnscan.py
-cd '/root/Downloads/ReconScan'
-./vulnscan -u
+./vulnscan.py -u
 pip3 install python-libnmap
 pip3 install colorama
 pip3 install lxml
@@ -101,7 +103,7 @@ python setup.py install
 
 #git SMBexec
 cd '/root/Downloads'
-https://github.com/pentestgeek/smbexec.git
+git clone https://github.com/pentestgeek/smbexec.git
 cd 'root/Downloads/smbexec'
 bundle install
 ./install.sh
@@ -160,7 +162,7 @@ cd '/root/Downloads'
 wget http://search.maven.org/remotecontent?filepath=org/python/jython-installer/2.7.0/jython-installer-2.7.0.jar -O jython-installer-2.7.0.jar
 
 #download and install fluxion - for evil twin WPA capture
-git clone https://github.com/deltaxflux/fluxion
+git clone https://github.com/wi-fi-analyzer/fluxion
 cd '/root/Downloads/fluxion'
 ./Installer.sh
 cd '/root'
@@ -195,5 +197,3 @@ mkdir bin
 echo "export PATH=$PATH:/root/bin"  >> .bashrc
 ln -s /opt/discover/discover.sh /root/bin/discover
 
-echo "Install neo4j at"
-firefox -new-tab https://neo4j.com/download/community-edition
