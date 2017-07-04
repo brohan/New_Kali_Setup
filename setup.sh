@@ -179,6 +179,9 @@ cat << EOF >> NetworkManager.conf
 unmanaged-devices=interface-name:wlan0mon;interface-name:wlan1mon;interface-name:wlan2mon;interface-name:wlan3mon;interface-name:wlan4mon;interface-name:wlan5mon;interface-name:wlan6mon;interface-name:wlan7mon;interface-name:wlan8mon;interface-name:wlan9mon;interface-name:wlan10mon;interface-name:wlan11mon;interface-name:wlan12mon
 EOF
 
+# change gdb disassembly-flavor to intel
+cd /root
+echo "set disassembly-flavor intel" > .gdbinit
 
 # add proper locale so that sparta works
 echo 'export LC_ALL=en_US.UTF-8'>>.bashrc
