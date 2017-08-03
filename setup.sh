@@ -109,6 +109,10 @@ cd 'root/Downloads/smbexec'
 bundle install
 ./install.sh
 
+#git updated pth-toolkit
+cd '/root/Downloads'
+git clone https://github.com/byt3bl33d3r/pth-toolkit.git
+
 #git Veil
 cd '/root/Downloads'
 git clone https://github.com/Veil-Framework/Veil-Evasion.git
