@@ -16,7 +16,7 @@ apt-get -y remove proxychains
 apt-get -y install openvas tor hexchat hostapd-wpe kde-spectacle synaptic libpq-dev \
 bridge-utils libnl-3-dev libgcrypt11-dev libnl-genl-3-dev devscripts cupp \
 mingw-w64 eyewitness libxslt-dev libxml2-dev vega cherrytree python3-pip dtrx neo4j \
-kdbg pure-ftpd crackmapexec
+kdbg pure-ftpd crackmapexec python-pyftpdlib
 
 searchsploit -u
 
@@ -113,9 +113,11 @@ bundle install
 cd '/root/Downloads'
 git clone https://github.com/byt3bl33d3r/pth-toolkit.git
 
-#git Veil
+#git install Veil-Framework
 cd '/root/Downloads'
-git clone https://github.com/Veil-Framework/Veil-Evasion.git
+git clone https://github.com/Veil-Framework/Veil.git
+cd '/root/Downloads/Veil/setup'
+./setup.sh -c
 
 #git printer exploits
 cd '/root/Download"
