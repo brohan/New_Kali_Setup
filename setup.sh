@@ -163,6 +163,11 @@ git clone https://github.com/breenmachine/httpscreenshot.git
 cd '/root/Downloads/httpscreenshot'
 chmod +x install-dependencies.sh && ./install-dependencies.sh
 
+#download accesschk versions
+curl --progress -k -L -f "https://web.archive.org/web/20080530012252/http://live.sysinternals.com/accesschk.exe" > /usr/share/windows-binaries/accesschk_v5.02.exe \
+curl --progress -k -L -f "https://download.sysinternals.com/files/AccessChk.zip" > /usr/share/windows-binaries/AccessChk.zip \
+unzip -q -o -d /usr/share/windows-binaries/ /usr/share/windows-binaries/AccessChk.zip
+rm -f /usr/share/windows-binaries/{AccessChk.zip,Eula.txt}
 
 #download jython for Burpsuite extension
 cd '/root/Downloads'
