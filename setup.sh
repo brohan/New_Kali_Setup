@@ -16,7 +16,8 @@ apt-get -y remove proxychains
 apt-get -y install openvas tor hexchat hostapd-wpe kde-spectacle synaptic libpq-dev \
 bridge-utils libnl-3-dev libgcrypt11-dev libnl-genl-3-dev devscripts cupp \
 mingw-w64 eyewitness libxslt-dev libxml2-dev vega cherrytree python3-pip dtrx neo4j \
-kdbg pure-ftpd crackmapexec python-pyftpdlib pure-ftpd vsftpd seclists gobuster
+kdbg pure-ftpd crackmapexec python-pyftpdlib pure-ftpd vsftpd seclists gobuster cifs-utils \
+bloodhound
 
 searchsploit -u
 
@@ -122,6 +123,14 @@ cd '/root/Downloads/Veil/setup'
 #git printer exploits
 cd '/root/Download"
 git clone https://github.com/MooseDojo/praedasploit /opt/praedasploit
+
+#get short private rsa keys for 2006 Debian openssl short key exploit
+mkdir /usr/share/wordlists/short_ssh_priv_keys
+cd /usr/share/wordlists/short_ssh_priv_keys
+wget http://digitaloffense.net/tools/debian-openssl/debian_ssh_dsa_1024_x86.tar.bz2
+wget http://digitaloffense.net/tools/debian-openssl/debian_ssh_rsa_2048_x86.tar.bz2
+tar -xvjf debian_ssh_rsa_2048_x86.tar.bz2
+tar -xvjf debian_ssh_dsa_1024_x86.tar.bz2
 
 #get DSHashes
 cd '/root/Downloads'
