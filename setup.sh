@@ -97,6 +97,10 @@ dpkg -i atom.deb
 cd '/root/Downloads'
 git clone https://github.com/Dionach/CMSmap.git
 
+#git knock for port knocking
+cd '/root/Downloads'
+git clone https://github.com/grongor/knock.git
+
 #git NoSQLMap
 cd '/root/Downloads'
 git clone https://github.com/tcstool/NoSQLMap.git
@@ -110,9 +114,27 @@ cd 'root/Downloads/smbexec'
 bundle install
 ./install.sh
 
+#git ps1encode to encode msf payloads for powershell
+cd '/root/Downloads'
+git clone https://github.com/CroweCybersecurity/ps1encode
+
 #git updated pth-toolkit
 cd '/root/Downloads'
 git clone https://github.com/byt3bl33d3r/pth-toolkit.git
+
+#git unix-privesc-check
+cd '/root/Downloads'
+git clone https://github.com/pentestmonkey/unix-privesc-check.git
+
+#git LinEnum
+cd '/root/Downloads'
+git clone https://github.com/rebootuser/LinEnum.git
+
+#wget linuxprivchecker
+cd '/root/Downloads'
+mkdir linuxprivchecker
+cd '/root/Downloads/linuxprivchecker'
+wget https://www.securitysift.com/download/linuxprivchecker.py
 
 #git install Veil-Framework
 cd '/root/Downloads'
