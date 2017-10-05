@@ -17,7 +17,7 @@ apt-get -y install openvas tor hexchat hostapd-wpe kde-spectacle synaptic libpq-
 bridge-utils libnl-3-dev libgcrypt11-dev libnl-genl-3-dev devscripts cupp \
 mingw-w64 eyewitness libxslt-dev libxml2-dev vega cherrytree python3-pip dtrx neo4j \
 kdbg pure-ftpd crackmapexec python-pyftpdlib pure-ftpd vsftpd seclists gobuster cifs-utils \
-bloodhound
+bloodhound qt-sdk libboost-dev libcapstone3 libcapstone3-dev graphviz graphviz-dev
 
 searchsploit -u
 
@@ -77,6 +77,11 @@ nameserver 185.83.217.248
 EOF
 chatter +i resolv.conf
 
+#clone PowerSploit and Metasploit in root for easy grep search using git grep
+cd '/root'
+git clone https://github.com/PowerShellMafia/PowerSploit.git
+git clone https://github.com/rapid7/metasploit-framework.git
+
 #git updated reconscan by RoliSoft
 cd '/root/Downloads'
 git clone https://github.com/RoliSoft/ReconScan.git
@@ -97,9 +102,20 @@ dpkg -i atom.deb
 cd '/root/Downloads'
 git clone https://github.com/Dionach/CMSmap.git
 
+#git Linux Exploit Suggester
+cd '/root/Downloads'
+git clone https://github.com/PenturaLabs/Linux_Exploit_Suggester.git
+
+#git edb-debugger
+cd '/root/Downloads'
+git clone https://github.com/eteran/edb-debuger
+
 #git knock for port knocking
 cd '/root/Downloads'
 git clone https://github.com/grongor/knock.git
+
+# install sshuttle alternative for Dynamic Port Forward / proxychains
+pip install sshuttle
 
 #git NoSQLMap
 cd '/root/Downloads'
@@ -172,6 +188,18 @@ git clone https://github.com/secretsquirrel/the-backdoor-factory
 cd '/root/Downloads/the-backdoor-factory
 ./install.sh
 
+#git a php password hash cracker
+cd '/root/Downloads'
+git clone https://github.com/micahflee/phpass_crack.git
+
+#git a wget_vbs bat script to create a redneck wget vbs script
+cd '/root/Downloads'
+git clone https://gist.github.com/sckalath/ec7af6a1786e3de6c309
+mv  'ec7af6a1786e3de6c309' 'wget_vbs'
+rm -rf '/root/work_area/ec7af6a1786e3de6c309'
+cp 'wget_vbs/wget_vbs' '/usr/share/windows-binaries/wget_vbs'
+
+
 #git custom Playbook scripts
 cd '/root/Downloads'
 git clone https://github.com/cheetz/Easy-P.git
@@ -209,6 +237,7 @@ git clone https://github.com/wi-fi-analyzer/fluxion
 cd '/root/Downloads/fluxion'
 ./Installer.sh
 cd '/root'
+
 
 #enable packet forwarding
 echo 1 > /proc/sys/net/ipv4/ip_forward
