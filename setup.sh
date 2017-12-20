@@ -98,6 +98,9 @@ cd '/root/Downloads'
 wget https://atom.io/download/deb -O atom.deb
 dpkg -i atom.deb
 
+cd '/root/Downloads'
+wget http://www.securitysift.com/download/linuxprivchecker.py
+
 #git CMSmap
 cd '/root/Downloads'
 git clone https://github.com/Dionach/CMSmap.git
