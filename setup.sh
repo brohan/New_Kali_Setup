@@ -9,15 +9,14 @@ sed -i -e 's/kali/user1/' /etc/hosts
 echo "set editing-mode vi" >> /etc/inputrc
 
 apt-get update && upgrade
-#apt install virtualbox
 
 #uninstall and install packages update searchsploit
 apt-get -y remove proxychains
-apt-get -y install openvas tor hexchat hostapd-wpe kde-spectacle synaptic libpq-dev \
+apt-get -y install openvas tor hexchat hostapd-wpe shutter libpq-dev \
 bridge-utils libnl-3-dev libgcrypt11-dev libnl-genl-3-dev devscripts cupp \
 mingw-w64 eyewitness libxslt-dev libxml2-dev vega cherrytree python3-pip dtrx neo4j \
 kdbg pure-ftpd crackmapexec python-pyftpdlib pure-ftpd vsftpd seclists gobuster cifs-utils \
-bloodhound qt-sdk libboost-dev libcapstone3 libcapstone3-dev graphviz graphviz-dev
+bloodhound qt-sdk libboost-dev libcapstone3 libcapstone3-dev graphviz graphviz-dev rpcbind nfs-common
 
 searchsploit -u
 
@@ -154,6 +153,10 @@ cd '/root/Downloads'
 mkdir linuxprivchecker
 cd '/root/Downloads/linuxprivchecker'
 wget https://www.securitysift.com/download/linuxprivchecker.py
+
+#git clone linux-exploit-suggester.sh)
+cd '/root/Downloads'
+git clone https://github.com/mzet-/linux-exploit-suggester.git
 
 #git install Veil-Framework
 cd '/root/Downloads'
