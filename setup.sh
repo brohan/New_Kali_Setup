@@ -15,8 +15,8 @@ apt-get -y remove proxychains
 apt-get -y install openvas tor hexchat hostapd-wpe shutter libpq-dev \
 bridge-utils libnl-3-dev libgcrypt11-dev libnl-genl-3-dev devscripts cupp \
 mingw-w64 eyewitness libxslt-dev libxml2-dev vega cherrytree python3-pip dtrx neo4j \
-kdbg pure-ftpd crackmapexec python-pyftpdlib pure-ftpd vsftpd seclists gobuster cifs-utils \
-bloodhound qt-sdk libboost-dev libcapstone3 libcapstone3-dev graphviz graphviz-dev rpcbind nfs-common
+crackmapexec python-pyftpdlib seclists gobuster cifs-utils \
+bloodhound qt-sdk libboost-dev libcapstone3 libcapstone-dev graphviz graphviz-dev rpcbind nfs-common
 
 searchsploit -u
 
@@ -76,8 +76,22 @@ nameserver 185.83.217.248
 EOF
 chatter +i resolv.conf
 
+#git clone crackmapexec and install vs old version in repo
+aptinstall -y libssl-dev libffi-dev python-dev build-essential
+cd ~/Downloads
+pip install --user pipenv
+git clone --recursive https://github.com/byt3bl33d3r/CrackMapExec
+cd CrackMapExec
+PYTHON_BIN_PATH="$(python3 -m site --user-base)/bin"
+PATH="$PATH:$PYTHON_BIN_PATH"
+pipenv install
+pipenv shell
+python setup.py install
+exit
+
+
 #clone PowerSploit and Metasploit in root for easy grep search using git grep
-cd '/root'
+cd '/root/Downloads'
 git clone https://github.com/PowerShellMafia/PowerSploit.git
 git clone https://github.com/rapid7/metasploit-framework.git
 
@@ -85,12 +99,12 @@ git clone https://github.com/rapid7/metasploit-framework.git
 cd '/root/Downloads'
 git clone https://github.com/RoliSoft/ReconScan.git
 cd '/root/Downloads/ReconScan'
-chmod +x recon.py
-chmod +x vulnscan.py
 ./vulnscan.py -u
 pip3 install python-libnmap
 pip3 install colorama
 pip3 install lxml
+chmod +x recon.py
+chmod +x vulnscan.py
 
 #download and install atom text editor
 cd '/root/Downloads'
@@ -107,6 +121,10 @@ git clone https://github.com/Dionach/CMSmap.git
 #git Linux Exploit Suggester
 cd '/root/Downloads'
 git clone https://github.com/PenturaLabs/Linux_Exploit_Suggester.git
+
+git LinEnum (linux enumerator
+cd "/root/Downloads'
+git clone https://github.com/rebootuser/LinEnum.git
 
 #git edb-debugger
 cd '/root/Downloads'
@@ -143,10 +161,6 @@ git clone https://github.com/byt3bl33d3r/pth-toolkit.git
 #git unix-privesc-check
 cd '/root/Downloads'
 git clone https://github.com/pentestmonkey/unix-privesc-check.git
-
-#git LinEnum
-cd '/root/Downloads'
-git clone https://github.com/rebootuser/LinEnum.git
 
 #wget linuxprivchecker
 cd '/root/Downloads'
@@ -208,6 +222,8 @@ cp 'wget_vbs/wget_vbs' '/usr/share/windows-binaries/wget_vbs'
 
 #git custom Playbook scripts
 cd '/root/Downloads'
+mkdir Playbook_scripts
+cd Playbook_scripts
 git clone https://github.com/cheetz/Easy-P.git
 git clone https://github.com/cheetz/Password_Plus_One
 git clone https://github.com/cheetz/PowerShell_Popup
