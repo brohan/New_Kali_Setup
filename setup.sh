@@ -256,8 +256,8 @@ wget http://search.maven.org/remotecontent?filepath=org/python/jython-installer/
 
 #download and install fluxion - for evil twin WPA capture
 git clone https://github.com/wi-fi-analyzer/fluxion
-cd '/root/Downloads/fluxion'
-./Installer.sh
+cd '/root/Downloads/fluxion/install'
+./install.sh
 cd '/root'
 
 
