@@ -15,7 +15,7 @@ apt-get -y remove proxychains
 apt-get -y install openvas tor hexchat hostapd-wpe shutter libpq-dev \
 bridge-utils libnl-3-dev libgcrypt11-dev libnl-genl-3-dev devscripts cupp \
 mingw-w64 eyewitness libxslt-dev libxml2-dev vega cherrytree python3-pip dtrx neo4j \
-crackmapexec python-pyftpdlib seclists gobuster cifs-utils \
+crackmapexec python-pyftpdlib seclists gobuster cifs-utils ident-user-enum\
 bloodhound qt-sdk libboost-dev libcapstone3 libcapstone-dev graphviz graphviz-dev rpcbind nfs-common
 
 searchsploit -u
