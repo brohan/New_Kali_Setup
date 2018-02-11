@@ -17,7 +17,7 @@ bridge-utils libnl-3-dev libgcrypt11-dev libnl-genl-3-dev devscripts cupp \
 mingw-w64 eyewitness libxslt-dev libxml2-dev vega cherrytree python3-pip dtrx neo4j \
 crackmapexec python-pyftpdlib seclists gobuster cifs-utils \
 bloodhound qt-sdk libboost-dev libcapstone3 libcapstone-dev graphviz graphviz-dev rpcbind nfs-common \
-php-curl
+php-curl curl 
 
 searchsploit -u
 
@@ -99,6 +99,10 @@ git clone https://github.com/Arrexel/phpbash.git
 cd '/root/Downloads'
 git clone https://github.com/PowerShellMafia/PowerSploit.git
 git clone https://github.com/rapid7/metasploit-framework.git
+
+#clone rastamouse Sherlock.ps1 for win enum
+cd '/root/Downloads'
+git clone https://github.com/rasta-mouse/Sherlock.git
 
 #git updated reconscan by RoliSoft
 cd '/root/Downloads'
